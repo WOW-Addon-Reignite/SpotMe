@@ -1,0 +1,6 @@
+## Interface: 60100
+## Title: SpotMe
+## Author: 10leej
+## Notes: Spot's the Players character
+
+core.lua
