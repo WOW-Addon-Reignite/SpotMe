@@ -1,6 +1,5 @@
-## Interface: 60100
+﻿## Interface: 110005, 110007, 110010
 ## Title: SpotMe
-## Author: 10leej
-## Notes: Spot's the Players character
+## Notes: They should be there, but they didn't: misc collect and default UI settings.
 
 core.lua

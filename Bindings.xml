@@ -1,5 +1,5 @@
 <Bindings>
-	<Binding name="SPOTME_VISIBILITY" header="SPOTME">
+	<Binding name="SPOTME" category="ADDONS">
 		SpotMe:ToggleVisibility()
 	</Binding>
 </Bindings>

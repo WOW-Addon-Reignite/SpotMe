@@ -1,28 +1,38 @@
---config
-local MediaPath = "Interface\\Addons\\SpotMe\\media\\" --Set the media path
-local Image = MediaPath.."redarrow" --Select your image
-local Width = 100 --image width
-local Height = 100 --image height
-local Color = {1,1,1,.5} --R,G,B,Alpha
-local Location = {"CENTER", UIParent, 0, 100} --image location
-local Strata = "LOW" --image strata else wise known as the frame level
+-- [[ config ]] --
 
---end config
+--Set the media path / 材质路径
+local MediaPath = "Interface\\AddOns\\SpotMe\\media\\"
+--Select your image / 材质名称
+local Image = MediaPath.."NeonReticule-blue.tga"
+--image width / 宽度
+local Width = 100
+--image height / 高度
+local Height = 100
+--R,G,B,Alpha / 颜色：红，绿，蓝，透明度
+local Color = {1, 1, 1, .8}
+--image location / 座标：位置，锚点，x座标，y座标
+local Location = {"CENTER", UIParent, 0, -40}
+--image strata else wise known as the frame level / 材质的框体层级
+local Strata = "LOW"
+
+-- [[ end config ]] --
+
 local frame = CreateFrame("Frame", "SpotMe", UIParent)
-local texture = frame:CreateTexture(nil, "BACKROUND")
-texture:SetAllPoints()
-texture:SetTexture(Image)
-texture:SetVertexColor(unpack(Color))
-frame:SetWidth(Width)
-frame:SetHeight(Height)
-frame:SetPoint(unpack(Location))
-frame:SetFrameStrata(Strata)
+	local texture = frame:CreateTexture(nil, "BACKGROUND")
+	texture:SetAllPoints()
+	texture:SetTexture(Image)
+	texture:SetVertexColor(unpack(Color))
+	
+	frame:SetWidth(Width)
+	frame:SetHeight(Height)
+	frame:SetPoint(unpack(Location))
+	frame:SetFrameStrata(Strata)
 
-frame:Hide()
-function frame:ToggleVisibility()
-	frame:SetShown(not frame:IsShown())
-end
+	frame:Hide()
+	
+	function frame:ToggleVisibility()
+		frame:SetShown(not frame:IsShown())
+	end
 
 -- Keybindings
-BINDING_HEADER_SPOTME = "SpotMe"
-BINDING_NAME_SPOTME_VISIBILITY = binding_visibility
+BINDING_NAME_SPOTME = binding_visibility
