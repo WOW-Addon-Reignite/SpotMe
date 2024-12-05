@@ -1,4 +1,4 @@
-﻿## Interface: 110005, 110007, 110010
+﻿## Interface: 110005, 110007, 110010, 40401, 11505, 30403
 ## Title: SpotMe
 ## Notes: They should be there, but they didn't: misc collect and default UI settings.
 
